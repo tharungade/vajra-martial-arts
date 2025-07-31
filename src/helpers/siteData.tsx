@@ -33,35 +33,35 @@ export const testimonials = [
   {
     name: "Rohan Sharma",
     role: "Student",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    avatar: "",
     quote:
       "The training here is intense but incredibly rewarding. The coaches are top-notch and really push you to be your best. I've never been in better shape.",
   },
   {
     name: "Priya Singh",
     role: "Fitness Enthusiast",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: "",
     quote:
       "Vajra Academy is more than a gym, it's a community. The atmosphere is so supportive. I started for fitness and now I'm in love with Muay Thai.",
   },
   {
     name: "Amit Kumar",
     role: "MMA Aspirant",
-    avatar: "https://randomuser.me/api/portraits/men/36.jpg",
+    avatar: "",
     quote:
       "The level of detail in the coaching is amazing. I've learned so much about technique and strategy. This is the place to be for serious martial artists.",
   },
   {
     name: "Anjali Verma",
     role: "Student",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+    avatar: "",
     quote:
       "I joined for self-defense classes and my confidence has skyrocketed. The instructors are patient and create a very safe learning environment for everyone.",
   },
   {
     name: "Vikram Rathore",
     role: "Wrestler",
-    avatar: "https://randomuser.me/api/portraits/men/75.jpg",
+    avatar: "",
     quote:
       "The wrestling and BJJ programs are legit. Great training partners and a strong focus on fundamentals. Highly recommend for any grappler.",
   },

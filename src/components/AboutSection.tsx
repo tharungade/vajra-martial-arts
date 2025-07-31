@@ -10,6 +10,7 @@ export const AboutSection = () => {
             src="https://images.unsplash.com/photo-1591117207239-788bf8de6c3b?w=800"
             alt="Martial artist training"
             className={styles.image}
+            loading="lazy"
           />
         </div>
         <div className={styles.content}>

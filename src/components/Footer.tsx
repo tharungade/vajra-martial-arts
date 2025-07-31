@@ -10,10 +10,11 @@ export const Footer = () => {
         <div className={styles.logoSection}>
           <Link to="/" className={styles.logo}>
             <img 
-              src="https://assets.floot.app/be3c5f8f-c277-446c-89e6-4b6119f647d6/6f5d6f7b-6cba-412f-aedd-bb85f30cbe4a.png" 
+              src="./vajra-logo.png" 
               alt="Vajra Martial Arts Academy Logo" 
               width={28} 
               height={28} 
+              loading="lazy"
             />
             <h2>Vajra Martial Arts</h2>
           </Link>

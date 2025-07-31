@@ -14,13 +14,10 @@ export const HeroSection = () => {
         loop
         muted
         playsInline
+        preload="none"
         poster="https://images.unsplash.com/photo-1517438322307-e67111335449?w=800"
       >
-        {/* A royalty-free video from Pexels */}
-        <source
-          src="https://videos.pexels.com/video-files/853888/853888-hd_1920_1080_25fps.mp4"
-          type="video/mp4"
-        />
+        <source src="./boxing-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className={styles.content}>
