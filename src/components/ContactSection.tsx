@@ -4,7 +4,7 @@ import { ContactForm } from "./ContactForm.tsx";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 
 export const ContactSection = () => {
-  const whatsappNumber = "919990004372";
+  const whatsappNumber = "918810508369";
   const whatsappMessage = encodeURIComponent(
     "Hi! I'm interested in joining Vajra Martial Arts Academy."
   );
@@ -31,13 +31,13 @@ export const ContactSection = () => {
               <h3 className={styles.infoTitle}>Contact Information</h3>
 
               <div className={styles.infoList}>
-                <a href="tel:+919990004372" className={styles.infoItem}>
+                <a href="tel:+918810508369" className={styles.infoItem}>
                   <div className={styles.iconWrapper}>
                     <Phone size={20} />
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Call Us</span>
-                    <span className={styles.infoValue}>+91 9990004372</span>
+                    <span className={styles.infoValue}>+91 8810508369</span>
                   </div>
                 </a>
 
