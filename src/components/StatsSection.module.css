@@ -1,0 +1,112 @@
+.stats {
+    padding: var(--spacing-16) 0;
+    background: linear-gradient(180deg, var(--background) 0%, var(--surface) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-8);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--spacing-8);
+    }
+}
+
+.statCard {
+    text-align: center;
+    padding: var(--spacing-6);
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.statCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(var(--primary-rgb), 0.3);
+}
+
+.iconWrapper {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--spacing-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+.icon {
+    color: white;
+}
+
+.statValue {
+    font-family: var(--font-family-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--foreground);
+    line-height: 1;
+    margin-bottom: var(--spacing-2);
+}
+
+.suffix {
+    color: var(--primary);
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 767px) {
+    .statCard {
+        padding: var(--spacing-4);
+    }
+
+    .iconWrapper {
+        width: 48px;
+        height: 48px;
+    }
+
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .statValue {
+        font-size: 2rem;
+    }
+
+    .statLabel {
+        font-size: 0.75rem;
+    }
+}
