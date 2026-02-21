@@ -11,7 +11,7 @@ interface StatItem {
 
 const stats: StatItem[] = [
     { icon: Star, value: 4.8, suffix: "+", label: "Google Rating" },
-    { icon: MapPin, value: 1, suffix: "", label: "Training Center" },
+    { icon: MapPin, value: 2, suffix: "", label: "Training Centers" },
     { icon: Users, value: 500, suffix: "+", label: "Students Trained" },
     { icon: Award, value: 5, suffix: "+", label: "Years Experience" },
 ];

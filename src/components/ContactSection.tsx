@@ -94,15 +94,33 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.mapWrapper}>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3500.0410089786456!2d77.37631737460255!3d28.68841985377767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf128db0286ef%3A0xfd4227ffd59b803!2sVajra%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1753851402623!5m2!1sen!2sin"
-                className={styles.mapIframe}
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Vajra Martial Arts Academy Location"
-              />
+              <h4 className={styles.mapLabel}>📍 Ghaziabad</h4>
+              <div className={styles.mapEmbed}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3500.0410089786456!2d77.37631737460255!3d28.68841985377767!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf128db0286ef%3A0xfd4227ffd59b803!2sVajra%20Martial%20Arts%20Academy!5e0!3m2!1sen!2sin!4v1753851402623!5m2!1sen!2sin"
+                  className={styles.mapIframe}
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Vajra Martial Arts Academy — Ghaziabad"
+                />
+              </div>
+            </div>
+
+            <div className={styles.mapWrapper}>
+              <h4 className={styles.mapLabel}>📍 Mohali</h4>
+              <div className={styles.mapEmbed}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13721.150048671283!2d76.7060312!3d30.7103167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fef19ce04354b%3A0x6c4d7ae6e3bc7f25!2sVajra%20martial%20arts%20Academy%202.0!5e0!3m2!1sen!2sin!4v1771650139492!5m2!1sen!2sin"
+                  className={styles.mapIframe}
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Vajra Martial Arts Academy — Mohali"
+                />
+              </div>
             </div>
           </div>
         </div>

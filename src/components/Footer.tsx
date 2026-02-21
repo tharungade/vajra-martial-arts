@@ -9,11 +9,11 @@ export const Footer = () => {
       <div className={styles.container}>
         <div className={styles.logoSection}>
           <Link to="/" className={styles.logo}>
-            <img 
-              src="./vajra-logo.png" 
-              alt="Vajra Martial Arts Academy Logo" 
-              width={28} 
-              height={28} 
+            <img
+              src="./vajra-logo.png"
+              alt="Vajra Martial Arts Academy Logo"
+              width={28}
+              height={28}
               loading="lazy"
             />
             <h2>Vajra Martial Arts</h2>
@@ -35,7 +35,18 @@ export const Footer = () => {
           </a>
           <a
             href="https://www.instagram.com/vajra_martialarts_academy/"
-            aria-label="Instagram"
+            aria-label="Instagram — Ghaziabad"
+            title="Instagram — Ghaziabad"
+            className={styles.socialLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram size={20} />
+          </a>
+          <a
+            href="https://www.instagram.com/vajra_martialartsacademy2.0/"
+            aria-label="Instagram — Mohali"
+            title="Instagram — Mohali"
             className={styles.socialLink}
             target="_blank"
             rel="noopener noreferrer"

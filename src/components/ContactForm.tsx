@@ -9,6 +9,7 @@ interface FormData {
     phone: string;
     message: string;
     interest: string;
+    location: string;
 }
 
 interface FormErrors {
@@ -27,6 +28,7 @@ export const ContactForm: React.FC = () => {
         phone: "",
         message: "",
         interest: "general",
+        location: "ghaziabad",
     });
     const [errors, setErrors] = useState<FormErrors>({});
     const [status, setStatus] = useState<FormStatus>("idle");
@@ -40,6 +42,11 @@ export const ContactForm: React.FC = () => {
         { value: "fitness", label: "Fitness Training" },
         { value: "self-defense", label: "Self Defense" },
         { value: "trial", label: "Book Free Trial" },
+    ];
+
+    const locations = [
+        { value: "ghaziabad", label: "Ghaziabad Centre" },
+        { value: "mohali", label: "Mohali Centre" },
     ];
 
     const validateForm = (): boolean => {
@@ -96,12 +103,13 @@ export const ContactForm: React.FC = () => {
                 },
                 body: JSON.stringify({
                     access_key: "18e016f2-b576-42ea-ba0d-3360512ac8d5",
-                    subject: `New Inquiry from ${formData.name} - Vajra Martial Arts`,
+                    subject: `New Inquiry from ${formData.name} - Vajra Martial Arts (${locations.find((l) => l.value === formData.location)?.label})`,
                     from_name: "Vajra Martial Arts Website",
                     name: formData.name,
                     email: formData.email,
                     phone: formData.phone,
                     interest: interests.find((i) => i.value === formData.interest)?.label,
+                    location: locations.find((l) => l.value === formData.location)?.label,
                     message: formData.message,
                 }),
             });
@@ -114,6 +122,7 @@ export const ContactForm: React.FC = () => {
                     phone: "",
                     message: "",
                     interest: "general",
+                    location: "ghaziabad",
                 });
             } else {
                 throw new Error("Form submission failed");
@@ -202,6 +211,25 @@ export const ContactForm: React.FC = () => {
                         className={styles.select}
                     >
                         {interests.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
+                <div className={styles.inputGroup}>
+                    <label htmlFor="location" className={styles.label}>
+                        Preferred Location
+                    </label>
+                    <select
+                        id="location"
+                        name="location"
+                        value={formData.location}
+                        onChange={handleChange}
+                        className={styles.select}
+                    >
+                        {locations.map((option) => (
                             <option key={option.value} value={option.value}>
                                 {option.label}
                             </option>
