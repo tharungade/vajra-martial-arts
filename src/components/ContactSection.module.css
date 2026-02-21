@@ -161,12 +161,28 @@
   flex-shrink: 0;
 }
 
+.phoneIcon {
+  background: linear-gradient(135deg, #2196F3 0%, #1565C0 100%);
+}
+
 .whatsappIcon {
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
 }
 
 .whatsappItem:hover {
   background: rgba(37, 211, 102, 0.1);
+}
+
+.emailIcon {
+  background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+}
+
+.locationIcon {
+  background: linear-gradient(135deg, #FF9800 0%, #E65100 100%);
+}
+
+.hoursIcon {
+  background: linear-gradient(135deg, #9C27B0 0%, #6A1B9A 100%);
 }
 
 .infoLabel {
