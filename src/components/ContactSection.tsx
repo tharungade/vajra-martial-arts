@@ -79,7 +79,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Visit Us</span>
-                    <span className={styles.infoValue}>Ghaziabad, Uttar Pradesh</span>
+                    <span className={styles.infoValue}>Ghaziabad & Mohali</span>
                   </div>
                 </a>
 

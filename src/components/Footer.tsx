@@ -36,8 +36,8 @@ export const Footer = () => {
           </a>
           <a
             href="https://www.instagram.com/vajra_martialarts_academy/"
-            aria-label="Instagram — Ghaziabad"
-            title="Instagram — Ghaziabad"
+            aria-label="Instagram"
+            title="Instagram"
             className={styles.socialLink}
             target="_blank"
             rel="noopener noreferrer"

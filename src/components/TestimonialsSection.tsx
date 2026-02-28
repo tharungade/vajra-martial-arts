@@ -17,7 +17,7 @@ export const TestimonialsSection = () => {
       className={styles.testimonials}
       id="testimonials"
       style={{
-        background: `linear-gradient(180deg, hsl(240 10% 3.9% / 0.88) 0%, hsl(240 10% 3.9% / 0.92) 100%), url('${process.env.PUBLIC_URL}/vajra_main_4.jpg') center/cover no-repeat`,
+        background: `linear-gradient(180deg, hsl(240 10% 3.9% / 0.7) 0%, hsl(240 10% 3.9% / 0.8) 100%), url('${process.env.PUBLIC_URL}/vajra_main_4.jpg') center/cover no-repeat`,
       }}
     >
       <div className={styles.container}>

@@ -70,7 +70,7 @@ export const HeroSection = () => {
           Master Your Mind<span className={styles.highlight}>.</span>
         </h1>
         <p className={styles.tagline}>
-          Ghaziabad's elite training ground for Muay Thai, MMA, and total
+          The elite training ground for Muay Thai, MMA, and total
           fitness. Unleash your potential at Vajra Martial Arts Academy.
         </p>
         <div className={styles.ctaContainer}>

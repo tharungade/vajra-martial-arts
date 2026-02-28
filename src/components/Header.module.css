@@ -24,6 +24,7 @@
   gap: var(--spacing-2);
   text-decoration: none;
   color: var(--foreground);
+  z-index: 1;
 }
 
 .logo h1 {
@@ -81,8 +82,162 @@
   align-items: center;
 }
 
+/* ========== Hamburger Button ========== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 401;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.hamburgerBar {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--foreground);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate to X when open */
+.hamburgerOpen .hamburgerBar:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburgerOpen .hamburgerBar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburgerOpen .hamburgerBar:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ========== Mobile Backdrop ========== */
+.mobileBackdrop {
+  display: none;
+}
+
+/* ========== Mobile Navigation Panel ========== */
+.mobileNav {
+  display: none;
+}
+
+/* ========== Mobile Responsive ========== */
 @media (max-width: 768px) {
   .nav {
     display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Backdrop */
+  .mobileBackdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 399;
+    animation: backdropFadeIn 0.25s ease;
+  }
+
+  @keyframes backdropFadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Mobile nav panel */
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    max-width: 85vw;
+    height: 100vh;
+    height: 100dvh;
+    background: var(--background);
+    border-left: 1px solid var(--border);
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.12);
+    z-index: 400;
+    padding: 5rem var(--spacing-6) var(--spacing-8);
+    gap: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    overflow-y: auto;
+  }
+
+  .mobileNavOpen {
+    transform: translateX(0);
+  }
+
+  .mobileNavLink {
+    font-family: var(--font-family-base);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--foreground);
+    text-decoration: none;
+    padding: var(--spacing-4) var(--spacing-3);
+    border-radius: var(--radius-md);
+    transition: background 0.2s ease, color 0.2s ease;
+    position: relative;
+  }
+
+  .mobileNavLink:hover,
+  .mobileNavLink:active {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--primary);
+  }
+
+  .mobileNavLink::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing-3);
+    right: var(--spacing-3);
+    height: 1px;
+    background: var(--border);
+  }
+
+  .mobileNavLink:last-of-type::after {
+    display: none;
+  }
+
+  .mobileActions {
+    margin-top: auto;
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--border);
+  }
+
+  .mobileActions a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }

@@ -45,14 +45,37 @@
 
 /* Masonry-like grid */
 .grid {
-    columns: 2;
+    columns: 1;
     column-gap: var(--spacing-4);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
     .grid {
         columns: 2;
         column-gap: var(--spacing-6);
+    }
+}
+
+/* Mobile gallery adjustments */
+@media (max-width: 639px) {
+    .gallery {
+        padding: var(--spacing-8) 0;
+    }
+
+    .container {
+        padding: 0 var(--spacing-4);
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .header {
+        margin-bottom: var(--spacing-8);
     }
 }
 

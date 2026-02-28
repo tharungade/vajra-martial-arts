@@ -23,11 +23,12 @@
   font-family: var(--font-family-base);
   font-size: 1rem;
   font-weight: 600;
-  color: var(--primary);
+  color: hsl(45 95% 55%);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--spacing-2);
   display: block;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .title {
@@ -36,7 +37,8 @@
   font-weight: 800;
   line-height: 1.2;
   margin: 0;
-  color: var(--foreground);
+  color: hsl(0 0% 100%);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
 }
 
 .carousel {
