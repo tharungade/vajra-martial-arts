@@ -1,25 +1,33 @@
-
 @import url(https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Fira+Code:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+
 :root {
   /* Content layers */
-  --z-content-low: 10; /* Minor elevated content */
-  --z-content: 20; /* Standard elevated content */
-  --z-content-high: 30; /* Important content that needs prominence */
+  --z-content-low: 10;
+  /* Minor elevated content */
+  --z-content: 20;
+  /* Standard elevated content */
+  --z-content-high: 30;
+  /* Important content that needs prominence */
 
   /* Navigation layers */
-  --z-nav-low: 100; /* Secondary navigation components */
-  --z-nav: 200; /* Primary navigation bars */
-  --z-nav-sticky: 300; /* Sticky navigation elements */
+  --z-nav-low: 100;
+  /* Secondary navigation components */
+  --z-nav: 200;
+  /* Primary navigation bars */
+  --z-nav-sticky: 300;
+  /* Sticky navigation elements */
 
   /* Overlay layers */
   --z-overlay: 400;
 
-  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+  --z-spotlight: 1000;
+  /* Tutorial spotlights/guided help */
 
   /* System layers */
-  --z-critical: 2000; /* Critical system notifications */
+  --z-critical: 2000;
+  /* Critical system notifications */
 
   /* spacing */
   --spacing-1: 0.25rem;
@@ -152,6 +160,13 @@
   --chart-color-4: hsl(0 84% 60%);
   --chart-color-5: hsl(240 5% 65%);
 }
+
+/* Prevent horizontal scroll from off-screen elements */
+html,
+body {
+  overflow-x: hidden;
+}
+
 @layer base {
   ul {
     list-style-type: none;
@@ -163,6 +178,7 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-family-base);
+    overflow-x: hidden;
   }
 
   * {
@@ -186,7 +202,8 @@
     text-decoration: none;
   }
 
-  th, td {
-    display: table-cell!important;
+  th,
+  td {
+    display: table-cell !important;
   }
 }

@@ -189,12 +189,14 @@
     padding: 5rem var(--spacing-6) var(--spacing-8);
     gap: 0;
     transform: translateX(100%);
-    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.3s;
     overflow-y: auto;
+    visibility: hidden;
   }
 
   .mobileNavOpen {
     transform: translateX(0);
+    visibility: visible;
   }
 
   .mobileNavLink {
