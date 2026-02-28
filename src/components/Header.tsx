@@ -10,11 +10,12 @@ export const Header = () => {
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
           <img 
-            src="./vajra-logo.png" 
+            src="./vajra_logo.jpg" 
             alt="Vajra Martial Arts Academy Logo" 
-            width={32} 
-            height={32} 
+            width={40} 
+            height={40} 
             loading="lazy"
+            style={{ borderRadius: '50%', objectFit: 'cover' }}
           />
           <h1>
             Vajra<span className={styles.logoHighlight}>.</span>

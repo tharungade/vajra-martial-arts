@@ -5,13 +5,23 @@ export const AboutSection = () => {
   return (
     <section className={styles.about} id="about">
       <div className={styles.container}>
-        <div className={styles.imageWrapper}>
-          <img
-            src="https://images.unsplash.com/photo-1591117207239-788bf8de6c3b?w=800"
-            alt="Martial artist training"
-            className={styles.image}
-            loading="lazy"
-          />
+        <div className={styles.imageColumn}>
+          <div className={styles.imageWrapper}>
+            <img
+              src="./vajra_main_1.jpg"
+              alt="Coach with championship belt at Vajra Martial Arts Academy"
+              className={styles.image}
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.imageWrapperSecondary}>
+            <img
+              src="./Vajra_main_5.jpg"
+              alt="Vajra Martial Arts athlete in Muay Thai jersey"
+              className={styles.image}
+              loading="lazy"
+            />
+          </div>
         </div>
         <div className={styles.content}>
           <span className={styles.preTitle}>Our Philosophy</span>

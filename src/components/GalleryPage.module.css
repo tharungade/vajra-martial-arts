@@ -1,0 +1,224 @@
+.gallery {
+    padding: var(--spacing-16) 0;
+    background-color: var(--background);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-8);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-12);
+}
+
+.preTitle {
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--spacing-2);
+    display: block;
+}
+
+.title {
+    font-family: var(--font-family-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 var(--spacing-4);
+    color: var(--foreground);
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: var(--muted-foreground);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Masonry-like grid */
+.grid {
+    columns: 2;
+    column-gap: var(--spacing-4);
+}
+
+@media (min-width: 768px) {
+    .grid {
+        columns: 2;
+        column-gap: var(--spacing-6);
+    }
+}
+
+.gridItem {
+    break-inside: avoid;
+    margin-bottom: var(--spacing-4);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .gridItem {
+        margin-bottom: var(--spacing-6);
+    }
+}
+
+.gridItem:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.gridItem:hover .gridOverlay {
+    opacity: 1;
+}
+
+.gridImage {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gridItem:hover .gridImage {
+    transform: scale(1.05);
+}
+
+.gridOverlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.zoomIcon {
+    font-size: 2rem;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.lightboxClose {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.lightboxClose:hover {
+    transform: scale(1.2);
+}
+
+.lightboxNav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 2.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: background 0.2s ease;
+    z-index: 1001;
+}
+
+.lightboxNav:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightboxPrev {
+    left: 1.5rem;
+}
+
+.lightboxNext {
+    right: 1.5rem;
+}
+
+.lightboxContent {
+    max-width: 85vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightboxImage {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.lightboxCaption {
+    margin-top: var(--spacing-4);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+    .lightboxNav {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .lightboxPrev {
+        left: 0.5rem;
+    }
+
+    .lightboxNext {
+        right: 0.5rem;
+    }
+
+    .lightboxClose {
+        top: 0.75rem;
+        right: 0.75rem;
+        font-size: 2rem;
+    }
+}

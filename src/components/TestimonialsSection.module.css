@@ -1,6 +1,11 @@
 .testimonials {
   padding: var(--spacing-16) 0;
-  background-color: var(--surface);
+  background: linear-gradient(180deg,
+      hsl(240 10% 3.9% / 0.88) 0%,
+      hsl(240 10% 3.9% / 0.92) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -70,7 +75,8 @@
   display: flex;
   gap: var(--spacing-1);
   margin-bottom: var(--spacing-4);
-  color: #ffc107; /* Using a specific gold for stars */
+  color: #ffc107;
+  /* Using a specific gold for stars */
 }
 
 .starIcon {

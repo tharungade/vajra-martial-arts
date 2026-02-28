@@ -88,7 +88,13 @@ export const StatsSection: React.FC = () => {
     }, []);
 
     return (
-        <section className={styles.stats} ref={sectionRef}>
+        <section
+            className={styles.stats}
+            ref={sectionRef}
+            style={{
+                background: `linear-gradient(180deg, hsl(240 10% 3.9% / 0.85) 0%, hsl(240 10% 3.9% / 0.9) 100%), url('${process.env.PUBLIC_URL}/vajra_main_2.jpg') center/cover no-repeat`,
+            }}
+        >
             <div className={styles.container}>
                 <div className={styles.statsGrid}>
                     {stats.map((stat, index) => (

@@ -16,7 +16,7 @@ export const ContactSection = () => {
           <span className={styles.preTitle}>Get in Touch</span>
           <h2 className={styles.title}>Start Your Journey Today</h2>
           <p className={styles.subtitle}>
-            Your transformation begins with a single step. Schedule a free trial class
+            Your transformation begins with a single step. Schedule your trial class
             and experience the Vajra difference firsthand.
           </p>
         </div>

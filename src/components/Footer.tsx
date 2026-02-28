@@ -10,11 +10,12 @@ export const Footer = () => {
         <div className={styles.logoSection}>
           <Link to="/" className={styles.logo}>
             <img
-              src="./vajra-logo.png"
+              src="./vajra_logo.jpg"
               alt="Vajra Martial Arts Academy Logo"
-              width={28}
-              height={28}
+              width={36}
+              height={36}
               loading="lazy"
+              style={{ borderRadius: '50%', objectFit: 'cover' }}
             />
             <h2>Vajra Martial Arts</h2>
           </Link>

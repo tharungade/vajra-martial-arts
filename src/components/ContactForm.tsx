@@ -41,7 +41,7 @@ export const ContactForm: React.FC = () => {
         { value: "bjj", label: "Brazilian Jiu-Jitsu" },
         { value: "fitness", label: "Fitness Training" },
         { value: "self-defense", label: "Self Defense" },
-        { value: "trial", label: "Book Free Trial" },
+        { value: "trial", label: "Book your Trial" },
     ];
 
     const locations = [
@@ -95,7 +95,7 @@ export const ContactForm: React.FC = () => {
         setStatus("submitting");
 
         try {
-            // Using Web3Forms - free form submission service
+            // Using Web3Forms - form submission service
             const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
                 headers: {
@@ -145,7 +145,7 @@ export const ContactForm: React.FC = () => {
 
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
-            <h3 className={styles.formTitle}>Schedule Your Free Trial</h3>
+            <h3 className={styles.formTitle}>Schedule Your Trial</h3>
             <p className={styles.formSubtitle}>
                 Fill out the form below and our team will contact you shortly.
             </p>

@@ -14,15 +14,24 @@ export const ServicesSection = () => {
             designed to build complete martial artists.
           </p>
         </div>
-        <div className={styles.grid}>
-          {services.map((service) => (
-            <div key={service.name} className={styles.card}>
-              <div className={styles.iconWrapper}>
-                <service.icon className={styles.icon} size={32} />
+        <div className={styles.layout}>
+          <div className={styles.featureImage}>
+            <img
+              src="./vajra_main_3.jpg"
+              alt="Training stance at Vajra Martial Arts Academy"
+              loading="lazy"
+            />
+          </div>
+          <div className={styles.grid}>
+            {services.map((service) => (
+              <div key={service.name} className={styles.card}>
+                <div className={styles.iconWrapper}>
+                  <service.icon className={styles.icon} size={32} />
+                </div>
+                <h3 className={styles.cardTitle}>{service.name}</h3>
               </div>
-              <h3 className={styles.cardTitle}>{service.name}</h3>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

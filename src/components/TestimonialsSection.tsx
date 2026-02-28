@@ -13,7 +13,13 @@ import { Star } from "lucide-react";
 
 export const TestimonialsSection = () => {
   return (
-    <section className={styles.testimonials} id="testimonials">
+    <section
+      className={styles.testimonials}
+      id="testimonials"
+      style={{
+        background: `linear-gradient(180deg, hsl(240 10% 3.9% / 0.88) 0%, hsl(240 10% 3.9% / 0.92) 100%), url('${process.env.PUBLIC_URL}/vajra_main_4.jpg') center/cover no-repeat`,
+      }}
+    >
       <div className={styles.container}>
         <div className={styles.header}>
           <span className={styles.preTitle}>Word on the Mat</span>

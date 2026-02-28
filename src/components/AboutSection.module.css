@@ -13,10 +13,23 @@
   align-items: center;
 }
 
+.imageColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
 .imageWrapper {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+}
+
+.imageWrapperSecondary {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  max-height: 250px;
 }
 
 .image {
@@ -97,7 +110,12 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-8);
   }
+
   .content {
     padding-left: 0;
+  }
+
+  .imageWrapperSecondary {
+    max-height: 200px;
   }
 }
