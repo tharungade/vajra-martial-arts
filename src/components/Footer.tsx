@@ -55,6 +55,16 @@ export const Footer = () => {
             <Instagram size={20} />
           </a>
           <a
+            href="https://www.instagram.com/vajra.martialarts.academy3.0/"
+            aria-label="Instagram — Indirapuram"
+            title="Instagram — Indirapuram"
+            className={styles.socialLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram size={20} />
+          </a>
+          <a
             href="https://www.youtube.com/@vajramartialartsacademy7867"
             aria-label="YouTube"
             className={styles.socialLink}

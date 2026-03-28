@@ -79,7 +79,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <span className={styles.infoLabel}>Visit Us</span>
-                    <span className={styles.infoValue}>Ghaziabad & Mohali</span>
+                    <span className={styles.infoValue}>Ghaziabad, Indirapuram & Mohali</span>
                   </div>
                 </a>
 
@@ -106,6 +106,21 @@ export const ContactSection = () => {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Vajra Martial Arts Academy — Ghaziabad"
+                />
+              </div>
+            </div>
+
+            <div className={styles.mapWrapper}>
+              <h4 className={styles.mapLabel}>📍 Indirapuram</h4>
+              <div className={styles.mapEmbed}>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.578726606237!2d77.37921949999999!3d28.642385500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf10543a60d0b%3A0xffd7757c56a9f9a5!2sVAJRA%20Martial%20Arts%20Academy%20Indirapuram!5e0!3m2!1sen!2sin!4v1774687702420!5m2!1sen!2sin"
+                  className={styles.mapIframe}
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="VAJRA Martial Arts Academy — Indirapuram"
                 />
               </div>
             </div>

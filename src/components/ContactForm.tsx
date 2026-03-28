@@ -46,6 +46,7 @@ export const ContactForm: React.FC = () => {
 
     const locations = [
         { value: "ghaziabad", label: "Ghaziabad Centre" },
+        { value: "indirapuram", label: "Indirapuram Centre" },
         { value: "mohali", label: "Mohali Centre" },
     ];
 
